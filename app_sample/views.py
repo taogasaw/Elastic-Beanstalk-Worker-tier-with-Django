@@ -8,3 +8,7 @@ def put_log(request):
     logging.basicConfig(level=logging.INFO)
     logging.info('Log put!')
     return HttpResponse(status=200)
+
+
+def root(request):
+    return HttpResponse(status=200)

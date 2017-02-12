@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+import logging
 
-# Create your views here.
+
+@csrf_exempt  # csrf対策無効化
+def put_log(request):
+    logging.basicConfig(level=logging.INFO)
+    logging.info('Log put!')
+    return HttpResponse(status=200)

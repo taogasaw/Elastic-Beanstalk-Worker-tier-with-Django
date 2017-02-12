@@ -1,4 +1,4 @@
-version: 201702121510
+version: 1
 cron:
   - name: "put_log"
     url: "/put_log"
